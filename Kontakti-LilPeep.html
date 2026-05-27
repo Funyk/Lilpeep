@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Послуги — LilPeep Логістика</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div style="display:flex;gap:20px">
+      <a href="tel:+380984811766">📞 +380984811766</a>
+      <a href="mailto:folcoor@gmail.com">✉ folcoor@gmail.com</a>
+    </div>
+    <span>Пн–Пт: 9:00–18:00 &nbsp;|&nbsp; Сб: 10:00–15:00</span>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-dot"></div>
+      <div class="logo-text">
+        LilPeep
+        <span class="logo-sub">логістика та перевезення</span>
+      </div>
+    </div>
+    <nav>
+      <a href="LilPeep-Golovna.html">Головна</a>
+      <a href="Poslygi-LilPeep.html">Послуги</a>
+      <a href="Kontakti-LilPeep.html" class="active">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-content">
+    <div class="breadcrumb">
+      <a href="LilPeep-Golovna.html">Головна</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Контакти</span>
+    </div>
+    <h1>Зв'яжіться<br><span>з нами</span></h1>
+    <p class="page-header-desc">Відповімо протягом 15 хвилин у робочий час. Без черг та зайвої бюрократії.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="two-col">
+
+    <!-- FORM -->
+    <div class="form-box fade-up">
+      <div class="form-label">// Нова заявка</div>
+      <h2>Залишити заявку</h2>
+      <p class="sub">Заповніть форму — відповімо протягом години в робочий час</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="form-row">
+            <label>Ваше ім'я <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="Іван Петренко" required>
+          </div>
+          <div class="form-row">
+            <label>Телефон <span class="req">*</span></label>
+            <input type="tel" name="phone" placeholder="+380 __ ___ __ __" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>E-mail</label>
+          <input type="email" name="email" placeholder="example@mail.com">
+        </div>
+        <div class="form-row">
+          <label>Тип послуги</label>
+          <select name="service">
+            <option value="">— оберіть послугу —</option>
+            <option>Перевезення вантажів</option>
+            <option>Складські послуги</option>
+            <option>Експедирування</option>
+            <option>Міжнародні перевезення</option>
+            <option>Інше</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Повідомлення</label>
+          <textarea name="message" placeholder="Опишіть ваш вантаж, маршрут, орієнтовну дату відправлення..."></textarea>
+        </div>
+        <div class="form-note">Поля з <span style="color:var(--accent)">*</span> є обов'язковими для заповнення.</div>
+        <button type="submit" class="btn-primary">Надіслати заявку →</button>
+        <div class="success-msg" id="successMsg">✓ Заявку отримано! Зв'яжемося з вами найближчим часом.</div>
+      </form>
+    </div>
+
+    <!-- INFO SIDE -->
+    <div class="info-side fade-up">
+
+      <div class="info-card">
+        <div class="info-ico">⌂</div>
+        <div>
+          <div class="info-lbl">// Адреса офісу</div>
+          <div class="info-val">вул. Стрийська, 103<br>м. Львів, 79000</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-ico">☎</div>
+        <div>
+          <div class="info-lbl">// Телефон</div>
+          <div class="info-val"><a href="tel:+380984811766">+380 98 481 17 66</a></div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-ico">@</div>
+        <div>
+          <div class="info-lbl">// Електронна пошта</div>
+          <div class="info-val"><a href="mailto:folcoor@gmail.com">folcoor@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="hours-card">
+        <div class="hours-label">// Графік роботи</div>
+        <div class="hours-row">
+          <span class="hours-day">Понеділок — П'ятниця</span>
+          <span class="hours-time"><span class="status-dot" id="wdDot"></span><span id="wdTime">9:00 – 18:00</span></span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Субота</span>
+          <span class="hours-time"><span class="status-dot" id="satDot"></span><span id="satTime">10:00 – 15:00</span></span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Неділя</span>
+          <span class="hours-time closed"><span class="status-dot closed-dot"></span>Вихідний</span>
+        </div>
+      </div>
+
+      <div class="map-box">
+        <div class="map-label">// Розташування</div>
+        <div class="map-ph">
+          <span>📍</span>
+          <span>Карта розташування офісу</span>
+        </div>
+        <div class="map-addr">
+          вул. Стрийська, 103<br>
+          <small>Львів, Україна, 79000</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">LilPeep</div>
+      <p class="footer-desc">Логістична компанія. Вантажні перевезення по Україні та Європі. Працюємо з 2013 року.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Розділи</h4>
+      <a href="LilPeep-Golovna.html">Головна</a>
+      <a href="Poslygi-LilPeep.html">Послуги</a>
+      <a href="Kontakti-LilPeep.html">Контакти</a>
+    </div>
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <a href="tel:+380984811766">+380 98 481 17 66</a>
+      <a href="mailto:folcoor@gmail.com">folcoor@gmail.com</a>
+      <a>вул. Стрийська, 103, Львів</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>© 2013–2026 ТОВ «LilPeep». Всі права захищено.</span>
+    <span>Логістика та перевезення</span>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const faders = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 100);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  faders.forEach(el => obs.observe(el));
+
+  // Form submit demo
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.btn-primary');
+    btn.textContent = 'Надсилаємо...';
+    btn.style.opacity = '.7';
+    setTimeout(() => {
+      btn.textContent = '✓ Відправлено';
+      btn.style.background = '#00c864';
+      btn.style.opacity = '1';
+      document.getElementById('successMsg').style.display = 'block';
+      this.querySelectorAll('input, textarea, select').forEach(el => el.value = '');
+      setTimeout(() => {
+        btn.textContent = 'Надіслати заявку →';
+        btn.style.background = '';
+        document.getElementById('successMsg').style.display = 'none';
+      }, 4000);
+    }, 1200);
+  });
+
+  // Active status dots
+  const now = new Date();
+  const day = now.getDay(); // 0=Sun
+  const h = now.getHours(), m = now.getMinutes();
+  const mins = h * 60 + m;
+  const isWeekday = day >= 1 && day <= 5;
+  const isSat = day === 6;
+  const wdOpen = mins >= 540 && mins < 1080; // 9:00-18:00
+  const satOpen = mins >= 600 && mins < 900; // 10:00-15:00
+
+  const wdDot = document.getElementById('wdDot');
+  const satDot = document.getElementById('satDot');
+  if (!(isWeekday && wdOpen)) { wdDot.classList.add('closed-dot'); }
+  if (!(isSat && satOpen)) { satDot.classList.add('closed-dot'); }
+</script>
+</body>
+</html>
