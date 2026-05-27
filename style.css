@@ -227,25 +227,25 @@ footer { background: #050508; border-top: 1px solid var(--border); padding: 60px
 .srv-item::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); transform: scaleY(0); transform-origin: bottom; transition: transform .4s ease; }
 .srv-item:hover { border-color: rgba(255,61,0,0.3); background: rgba(255,61,0,0.03); }
 @media (max-width: 768px) {
-  /* --- АДАПТАЦІЯ ДЛЯ МОБІЛЬНИХ ТЕЛЕФОНІВ (включаючи 412x915) --- */
+}
 @media (max-width: 480px) {
   
-  /* 1. Робимо головний блок в одну колонку */
+  
   .hero-content {
-    grid-template-columns: 1fr; /* Одна колонка */
-    text-align: center; /* Текст по центру */
+    grid-template-columns: 1fr; 
+    text-align: center; 
     gap: 30px;
-    padding-top: 20px; /* Трохи опускаємо текст вниз */
+    padding-top: 20px; 
   }
 
-  /* 2. Ховаємо цифри, які стирчать справа */
+  
   .hero-visual {
     display: none; 
   }
 
-  /* 3. Оптимізуємо головний заголовок під ширину 412px */
+  
   .hero h1 {
-    font-size: 50px; /* Менший шрифт, щоб слова не розривалися */
+    font-size: 50px; 
     line-height: 1.1;
     margin-bottom: 15px;
   }
@@ -255,18 +255,18 @@ footer { background: #050508; border-top: 1px solid var(--border); padding: 60px
     margin-bottom: 30px;
   }
 
-  /* 4. Кнопки ставимо одна під одною для зручності натискання пальцем */
+  
   .hero-actions {
     display: flex;
-    flex-direction: column; /* Кнопки в стовпчик */
+    flex-direction: column; 
     gap: 15px;
     width: 100%;
     align-items: center;
   }
 
   .hero-actions a {
-    width: 100%; /* Розтягуємо кнопки */
-    max-width: 280px; /* Але не робимо їх занадто довгими */
+    width: 100%; 
+    max-width: 280px; 
     text-align: center;
     box-sizing: border-box;
   }
